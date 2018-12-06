@@ -1,0 +1,207 @@
+/*** 
+BASIC STYLE FOR VISUAL PURPOSES 
+Some of this will be overwritten by css
+that comes later in the file (as intended)
+***/
+
+body {
+	padding-bottom: 200px;
+}
+body > p {
+	padding: 1em;
+}
+
+h1 {
+	font-size: 2em;
+	padding: 1em;
+	text-align: center;
+}
+h2 {
+	font-size: 1.5em;
+	padding: 1em;
+}
+.wrapper {
+	display: flex;
+	flex-wrap: nowrap;
+	padding: 1em;
+}
+nav {
+	width: 150px;
+	padding: 1em;
+}
+nav a {
+	display: block;
+}
+section {
+	border: 1px dotted grey;
+}
+.content div {
+	display: inline-block;
+	margin: 5px;
+	width: 50px;
+	height: 50px;
+	background: grey;
+}
+
+/*** 
+CSS INDEX REFERENCE 
+***/
+
+#display_inline div {
+	display: inline;
+}
+
+#display_block div {
+	display: block;
+}
+
+#display_block .center_block {
+	margin: 0 auto;
+}
+
+#display_inlineblock div {
+	display: inline-block;
+}
+
+#display_flexboxrow {
+	display: flex;
+	flex-direction: row;
+}
+
+#display_flexboxrow div {
+	flex-grow: 1;
+}
+
+#display_flexboxcolumn {
+	display: flex;
+	flex-direction: column;
+}
+
+#display_flexboxcolumn div {
+	width: 100%;
+}
+
+
+#margins > div {
+	/* Direct child ONLY
+		The children of this div will not have this style applied
+	*/
+	/* We will be using this twice, so grouping style here */
+	width: auto;
+	height: auto;
+}
+
+#margins div.innerbox,
+#paddings div.innerbox {
+	/* only divs that have this class assigned to it */
+	/* We will be using this twice, so grouping style here */
+	background: white;	
+}
+
+#margins .innerbox.all {
+	margin: 50px;
+}
+
+#margins .innerbox.expand {
+	/* Alternative Methods */
+	/* margin: 50px 100px;		top/bottom left/right */
+	/* margin: 50px 100px 0px;	top left/right bottom */
+	margin: 50px 100px 30px 0px;	/* top left right bottom */
+}
+
+#margins .innerbox.multi {
+	margin-top: 50px;
+	margin-left: 50px;
+	margin-bottom: 50px;
+	margin-right: 50px;
+}
+
+#borders .all {
+	border: 10px double black;
+}
+#borders .expand {
+	border-left: 10px double black;
+	border-top: 1px dotted blue;
+	border-right: 20px solid red;
+	border-bottom: 5px dashed green;
+}
+
+#border_radius .all {
+	border-radius: 10px;
+}
+
+#border_radius .weird {
+	border-radius: 100px 4px 10px 15px;
+}
+
+#border_radius .round {
+	border-radius: 50%;
+}
+
+#paddings > div {
+	/* 
+		Allowing for more flexibility so everything stays inside the div block
+	*/
+	width: auto;
+	height: auto;
+}
+
+#paddings .innerbox {
+
+	margin: 0;
+}
+
+#paddings .all {
+	padding: 50px;
+}
+
+#paddings .expand {
+	/* Alternative Methods */
+	/* padding: 50px 100px;		top/bottom left/right */
+	/* padding: 50px 100px 0px;	top left/right bottom */
+	padding: 50px 100px 30px 0px;	/* top left right bottom */
+}
+
+#paddings .multi {
+	padding-top: 50px;
+	padding-left: 50px;
+	padding-bottom: 50px;
+	padding-right: 30px;
+}
+
+
+/* You don't need to specify id everytime
+	I'm going to be lazy here
+	(Rarely want to use id in css if you can avoid it, but for learning purposes ^v^)
+*/
+
+.serif_font {
+	font-family: Georgia,Times,Times New Roman,serif;
+}
+
+.sans_serif_font {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.monospace {
+	font-family: Courier, Courier New, monospace;
+}
+
+.underline {
+	/* NOTE: to clear for other elements, text-decoration: none; */
+	text-decoration: underline;
+}
+.line_through {
+	text-decoration: line-through;
+}
+.overline {
+	text-decoration: overline;
+}
+
+#bold {
+	font-weight: bold;
+}
+
+#italic {
+	font-style: italic;
+}
